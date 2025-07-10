@@ -1,0 +1,96 @@
+/* ~/.config/waybar/style.css */
+* {
+    border: none;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 14px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+    color: #cdd6f4;
+}
+
+/* Contenedores principales - 3 islas */
+.modules-left, .modules-center, .modules-right {
+    background-color: rgba(30, 30, 46, 0.8); /* Catppuccin Base */
+    border: 1.5px solid #45475a; /* Catppuccin Surface0 */
+    border-radius: 12px;
+    padding: 0 12px;
+    margin: 4px 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Workspaces - contenedor circular */
+#workspaces {
+    background: transparent;
+    padding: 0;
+    margin: 0 -5px;
+}
+
+/* Botones de workspace */
+#workspaces button {
+    color: #6c7086; /* Catppuccin Overlay1 */
+    background: transparent;
+    border-radius: 100%;
+    margin: 0 3px;
+    padding: 0;
+    min-width: 20px;
+    min-height: 20px;
+    font-size: 14px;
+}
+
+#workspaces button.active {
+    color: #b4befe; /* Lila suave Catppuccin Lavender */
+    background: rgba(180, 190, 254, 0.1);
+    text-shadow: 0 0 8px rgba(180, 190, 254, 0.3);
+}
+
+#workspaces button.urgent {
+    color: #f9e2af; /* Catppuccin Yellow */
+}
+
+/* Módulos individuales */
+#clock, #cpu, #network, #pulseaudio, #battery, #custom-power {
+    padding: 0 8px;
+    margin: 0 2px;
+}
+
+#clock {
+    color: #89b4fa; /* Catppuccin Blue */
+    font-weight: bold;
+}
+
+#cpu {
+    color: #f9e2af; /* Catppuccin Yellow */
+}
+
+#network {
+    color: #a6e3a1; /* Catppuccin Green */
+}
+
+#pulseaudio {
+    color: #f5c2e7; /* Catppuccin Pink */
+}
+
+#battery {
+    color: #89b4fa; /* Catppuccin Blue */
+}
+
+#battery.charging {
+    color: #a6e3a1; /* Catppuccin Green */
+}
+
+#battery.critical:not(.charging) {
+    color: #f38ba8; /* Catppuccin Red */
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0.3; }
+}
+
+#custom-power {
+    color: #f38ba8; /* Catppuccin Red */
+    margin-right: -4px;
+}

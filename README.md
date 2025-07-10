@@ -20,4 +20,5 @@ Puedes instalar todas las dependencias principales con:
 sudo pacman -S hyprland hyprlock hypridle waybar swaync swww wl-clipboard cliphist grim slurp brightnessctl pamixer fuzzel kitty ttf-jetbrains-mono-nerd papirus-icon-theme python-pywal mpvpaper dbus gsettings-desktop-schemas
 
 ## Autor
-androw
+SteveenR-A
+

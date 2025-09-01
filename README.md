@@ -1,4 +1,4 @@
-# Dotfiles Hyprland + Kitty + Waybar
+# Dotfiles Hyprland en Arch linux 
 
 Este repositorio contiene mi configuración personalizada para Hyprland, Kitty, Waybar y varios scripts de fondos de pantalla. El objetivo principal es mantener un respaldo de mi entorno y facilitar futuras modificaciones, así como recibir sugerencias de la comunidad.
 

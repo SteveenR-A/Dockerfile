@@ -1,0 +1,36 @@
+{
+    "label": "poweroff",
+    "action": "systemctl poweroff || loginctl poweroff",
+    "text": "<span class='icon'>⏻</span> Apagar",
+    "keybind": "s"
+}
+{
+    "label": "reboot",
+    "action": "systemctl reboot || loginctl reboot",
+    "text": "<span class='icon'></span> Reiniciar",
+    "keybind": "r"
+}
+{
+    "label": "suspend",
+    "action": "systemctl suspend || loginctl suspend",
+    "text": "<span class='icon'>🌙</span> Suspender",
+    "keybind": "u"
+}
+{
+    "label": "hibernate",
+    "action": "systemctl hibernate || loginctl hibernate",
+    "text": "<span class='icon'>💤</span> Hibernar",
+    "keybind": "h"
+}
+{
+    "label": "logout",
+    "action": "pkill Hyprland || pkill sway || pkill niri || loginctl terminate-user $USER",
+    "text": "<span class='icon'></span> Cerrar sesión",
+    "keybind": "e"
+}
+{
+    "label": "lock",
+    "action": "loginctl lock-session",
+    "text": "<span class='icon'></span> Bloquear",
+    "keybind": "l"
+}

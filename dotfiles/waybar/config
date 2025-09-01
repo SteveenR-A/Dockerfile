@@ -1,0 +1,73 @@
+{
+    "layer": "top",
+    "position": "top",
+    "modules-left": ["clock", "wlr/taskbar"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["cpu", "network", "pulseaudio", "battery", "custom/power"],
+
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 16,
+        "active-only": true,
+        "tooltip": false,
+        "on-click": "hyprctl dispatch workspace {workspace}"
+    },
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "1": "●",
+            "2": "●",
+            "3": "●",
+            "4": "●",
+            "5": "●",
+            "active": "●",
+            "urgent": "●",
+            "default": "●"
+        },
+        "on-click": "hyprctl dispatch workspace {id}",
+        "persistent_workspaces": [1,2,3,4,5]
+    },
+
+    "clock": {
+        "format": "{:%I:%M %p}",
+        "tooltip": false,
+        "on-click": "swaync-client -t"
+    },
+
+    "cpu": {
+        "format": " {usage}%",
+        "tooltip": false,
+        "on-click": "kitty htop"
+    },
+
+    "custom/power": {
+        "format": "⏻",
+        "on-click": "nwg-bar -t /home/androw/.config/nwg-bar/power.json -s /home/androw/.config/nwg-bar/style.css",
+        "tooltip": false
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": " Muted",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "scroll-step": 5,
+        "on-click": "blueman-manager"
+    },
+
+    "network": {
+        "format-wifi": " {signalStrength}%",
+        "format-ethernet": " {ipaddr}/{cidr}",
+        "format-disconnected": "",
+        "tooltip-format": "{essid} ({signalStrength}%)",
+        "on-click": "nm-connection-editor"
+    },
+
+    "battery": {
+        "format": "{icon} {capacity}%",
+        "format-icons": ["", "", "", "", ""],
+        "tooltip": false
+    }
+}

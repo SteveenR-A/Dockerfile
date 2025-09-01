@@ -1,0 +1,98 @@
+/* ~/.config/waybar/style.css */
+@import "/home/androw/.cache/wal/colors-waybar.css";
+* {
+    border: none;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 13px; /* reduce levemente la altura de línea global */
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+    color: @foreground;
+    min-height: 0;
+}
+
+/* Contenedores principales - 3 islas */
+.modules-left, .modules-center, .modules-right {
+    /* Fondo translúcido neutral; bordes y texto siguen la paleta de Pywal */
+    background-color: rgba(0, 0, 0, 0.18);
+    border: 1px solid @color8; /* borde tenue */
+    border-radius: 12px;
+    padding: 0 12px;
+    margin: 0px 6px; /* aún más compacto en altura */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Workspaces - contenedor circular */
+#workspaces {
+    background: transparent;
+    padding: 0;
+    margin: 0 -5px;
+}
+
+/* Botones de workspace */
+#workspaces button {
+    color: @color8; /* inactivo tenue */
+    background: transparent;
+    border-radius: 100%;
+    margin: 0 3px;
+    padding: 0;
+    min-width: 16px;
+    min-height: 16px;
+    font-size: 12px; /* pequeño ajuste para encajar con la altura */
+}
+
+#workspaces button.active {
+    color: @color12; /* activo: azul brillante */
+}
+
+#workspaces button.urgent {
+    color: @color11; /* urgente: amarillo brillante */
+}
+
+/* Módulos individuales */
+#clock, #cpu, #network, #pulseaudio, #battery, #custom-power {
+    padding: 0 6px;
+    margin: 0 1px;
+    font-size: 12px; /* Reduce un poco más para mejorar compacidad vertical */
+}
+
+#clock {
+    color: @color4; /* azul */
+    font-weight: bold;
+}
+
+#cpu {
+    color: @color3; /* amarillo */
+}
+
+#network {
+    color: @color2; /* verde */
+}
+
+#pulseaudio {
+    color: @color5; /* magenta/rosa */
+}
+
+#battery {
+    color: @color4; /* azul */
+}
+
+#battery.charging {
+    color: @color10; /* verde brillante */
+}
+
+#battery.critical:not(.charging) {
+    color: @color1; /* rojo */
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0.3; }
+}
+
+#custom-power {
+    color: @color1; /* rojo */
+    margin-right: -3px;
+}

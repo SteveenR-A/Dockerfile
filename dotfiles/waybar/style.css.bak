@@ -1,0 +1,56 @@
+/* Estilo Global */
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-family: "JetBrainsMono Nerd Font", FontAwesome, sans-serif;
+  font-size: 16px;
+}
+
+/* Barra Principal Transparente */
+window#waybar {
+  background: transparent;
+  color: #cdd6f4;
+}
+
+/* Islas Izquierda y Derecha */
+#clock, .modules-right {
+  background-color: #313244;
+  border: 1px solid #494d64;
+  border-radius: 16px;
+  padding: 4px 12px;
+  margin: 5px;
+}
+
+/* Iconos sin fondo individual */
+#clock, #custom-cpu, #network, #pulseaudio, #battery, #custom-power {
+  background: transparent;
+}
+
+/* Zona Central de Workspaces */
+#workspaces {
+  background: transparent;
+  padding: 0 20px;
+  margin: 0 10px;
+}
+#workspaces button {
+  padding: 0 8px;
+  font-size: 12px;
+  color: #6c7086;
+  background: transparent;
+}
+#workspaces button.active { color: #89b4fa; }
+#workspaces button.urgent { color: #f38ba8; }
+#workspaces button:hover {
+  background-color: rgba(137,180,250,0.1);
+  color: #cad3f5;
+}
+
+/* Estados de Batería */
+#battery.charging, #battery.plugged { color: #66ff66; }
+#battery.critical:not(.charging) {
+  color: #ff5555;
+  animation: blink 1s linear infinite;
+}
+@keyframes blink { 50% { opacity: 0.4; } }
+

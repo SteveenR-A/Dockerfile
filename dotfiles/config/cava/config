@@ -1,0 +1,23 @@
+[general]
+bars = 0  # 0 hace que cava use el máximo de barras según el ancho de la terminal
+bar_width = 1
+bar_spacing = 0
+autosens = 1
+framerate = 60
+monstercat = 1
+gravity = 1000
+
+[output]
+method = ncurses
+terminal_colors = 0
+orientation = bottom
+
+[input]
+method = pulse
+source = auto
+
+[color]
+include = ~/.cache/wal/cava.config
+
+[smoothing]
+integral = 77

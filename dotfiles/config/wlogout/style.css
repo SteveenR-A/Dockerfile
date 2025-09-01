@@ -1,0 +1,51 @@
+* {
+	all: unset;
+	background-image: none;
+	transition: 400ms cubic-bezier(0.05, 0.7, 0.1, 1);
+}
+
+window {
+	background-color: rgba(10, 15, 28, 0.92);
+	background-image: linear-gradient(120deg, rgba(0,20,40,0.92) 60%, rgba(0,60,120,0.85) 100%);
+	box-shadow: 0 0 32px #0099ff33;
+}
+
+button {
+	font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free", sans-serif;
+	font-size: 22px;
+	background-color: rgba(16, 24, 42, 0.92);
+	color: #caf0f8;
+	margin: 16px;
+	border-radius: 16px;
+	padding: 18px 32px;
+	min-width: 120px;
+	min-height: 80px;
+	border: 2px solid #0099ff;
+	transition: background 0.2s, color 0.2s;
+	box-shadow: 0 0 16px #0099ff22;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 12px;
+}
+
+button:focus,
+button:active,
+button:hover {
+	background-color: #182040;
+	color: #00e0ff;
+	border-color: #00e0ff;
+}
+
+button span.icon {
+	font-size: 2.1em;
+	margin-right: 12px;
+	display: inline-block;
+}
+
+button#poweroff .icon { color: #ff3b3b; }
+button#reboot .icon { color: #00bfff; }
+button#suspend .icon { color: #ffe066; }
+button#hibernate .icon { color: #b983ff; }
+button#logout .icon { color: #ffb347; }
+button#lock .icon { color: #00e0ff; }

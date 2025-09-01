@@ -48,7 +48,7 @@ Antes de instalar estos dotfiles, asegúrate de tener el siguiente software inst
 
 1.  **Clona el repositorio:**
   ```bash
-  git clone <URL_DEL_REPOSITORIO> ~/dotfiles
+  git clone https://github.com/SteveenR-A/Dotfile.git ~/dotfiles
   cd ~/dotfiles
   ```
 
